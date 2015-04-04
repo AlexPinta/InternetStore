@@ -49,9 +49,9 @@ public class AutorizationWindow {
                 public void actionPerformed(ActionEvent event) {
 
                 }
-            });
+            });*/
 
-            /*buttonClose.addActionListener(new ActionListener() {
+            buttonClose.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
 
@@ -59,7 +59,7 @@ public class AutorizationWindow {
                     //mainForm.dispose();
                     System.exit(0);
                 }
-            });*/
+            });
 
             mainForm.setVisible(true);
     }
