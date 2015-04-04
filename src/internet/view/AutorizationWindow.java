@@ -12,7 +12,7 @@ public class AutorizationWindow {
     public static void main(String[] args) {
         initWindowAutorization();
 
-        //System.out.println("Hi mahai");
+        System.out.println("Hi mahai");
 
 
     }
@@ -44,14 +44,14 @@ public class AutorizationWindow {
             mainPanel.add(buttonOk);
             mainPanel.add(buttonClose);
 
-            buttonOk.addActionListener(new ActionListener() {
+            /*buttonOk.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent event) {
 
                 }
             });
 
-            buttonClose.addActionListener(new ActionListener() {
+            /*buttonClose.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
 
@@ -59,7 +59,7 @@ public class AutorizationWindow {
                     //mainForm.dispose();
                     System.exit(0);
                 }
-            });
+            });*/
 
             mainForm.setVisible(true);
     }
