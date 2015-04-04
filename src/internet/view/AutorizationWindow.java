@@ -12,7 +12,7 @@ public class AutorizationWindow {
     public static void main(String[] args) {
         initWindowAutorization();
 
-        System.out.println("Hi mahai");
+        //System.out.println("Hi mahai");
 
 
     }
