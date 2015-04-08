@@ -53,49 +53,49 @@ public class AutorizationWindow {
             mainPanel.add(buttonClose);
 
         buttonOk.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent event) {
-                    String sqlQuery = "SELECT id, UserName, Password FROM users";
-                    try {
-                        Class.forName("com.mysql.jdbc.Driver").newInstance();
-                        myConnection = DriverManager.getConnection(url, "root", "Qwerty12345");
-                        stmt = myConnection.createStatement();
-                        ResultSet rsUsers = stmt.executeQuery(sqlQuery);
-                        while (rsUsers.next()) {
+                                       @Override
+                                       public void actionPerformed(ActionEvent event) {
+                                           String sqlQuery = "SELECT id, UserName, Password FROM users";
+                                           try {
+                                               Class.forName("com.mysql.jdbc.Driver").newInstance();
+                                               myConnection = DriverManager.getConnection(url, "root", "Qwerty12345");
+                                               stmt = myConnection.createStatement();
+                                               ResultSet rsUsers = stmt.executeQuery(sqlQuery);
+                                               while (rsUsers.next()) {
 
-                            int id = rsUsers.getInt("id");
-                            String userName = rsUsers.getString("userName");
-                            String password = rsUsers.getString("Password");
+                                                   int id = rsUsers.getInt("id");
+                                                   String userName = rsUsers.getString("userName");
+                                                   String password = rsUsers.getString("Password");
 
-                            System.out.print("ID: " + id);
-                            System.out.print(", Name: " + userName);
-                            System.out.println(", Password: " + password);
-                        }
-                        rsUsers.close();
-                        stmt.close();
-                        myConnection.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                                                   System.out.print("ID: " + id);
+                                                   System.out.print(", Name: " + userName);
+                                                   System.out.println(", Password: " + password);
+                                               }
+                                               rsUsers.close();
+                                               stmt.close();
+                                               myConnection.close();
+                                           } catch (Exception e) {
+                                               e.printStackTrace();
 
-                    } finally {
-                        try {
-                            if (stmt != null) {
-                                stmt.close();
-                            }
-                        } catch (SQLException se) {
-                            se.printStackTrace();
-                        }
-                        try {
-                            if (myConnection != null) {
-                                myConnection.close();
-                            }
-                        } catch (SQLException se) {
-                            se.printStackTrace();
-                        }
-                    }
+                                           } finally {
+                                               try {
+                                                   if (stmt != null) {
+                                                       stmt.close();
+                                                   }
+                                               } catch (SQLException se) {
+                                                   se.printStackTrace();
+                                               }
+                                               try {
+                                                   if (myConnection != null) {
+                                                       myConnection.close();
+                                                   }
+                                               } catch (SQLException se) {
+                                                   se.printStackTrace();
+                                               }
+                                           }
 
-                }
-                }
+                                       }
+                                   }
 
         );
 
